@@ -2,10 +2,8 @@ import { render } from "@testing-library/react";
 import Breadcrumbs from "../Breadcrumbs";
 
 describe("Breadcrumbs", () => {
-  // This is a starter test and eventually
-  // should be modified and/or deleted.
   it("renders folders and files separated by a forward slash", () => {
-    const { queryByText } = render(<Breadcrumbs inputItems={ [ "folder1", "folder2", "file1.txt" ] } />);
+    const { queryByText } = render(<Breadcrumbs inputItems={["folder1", "folder2", "file1.txt"]} />);
 
     expect(queryByText("folder1/folder2/file1.txt")).toBeInTheDocument();
   });

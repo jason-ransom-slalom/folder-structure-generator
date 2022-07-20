@@ -2,13 +2,12 @@ import { render } from "@testing-library/react";
 import Breadcrumbs from "../Breadcrumbs";
 
 describe("Breadcrumbs", () => {
-  it("renders folders and files separated by a forward slash", () => {
+  it("renders folders and files seperated by forward slash and spaces", () => {
     const { queryByText } = render(<Breadcrumbs inputItems={["folder1", "folder2", "file1.txt"]} />);
 
-    expect(queryByText("folder1/folder2/file1.txt")).toBeInTheDocument();
+    expect(queryByText("folder1 / folder2 / file1.txt")).toBeInTheDocument();
   });
 
-  // it.todo("adds a space preceding and proceeding each forward slash");
   // it.todo("renders text in UPPERCASE");
   // it.todo("appends '(root folder)' to the end of folders.");
   // it.todo("appends '(root file)' to the end of files");

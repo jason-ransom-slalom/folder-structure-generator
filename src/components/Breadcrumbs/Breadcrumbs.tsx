@@ -6,7 +6,7 @@ interface BreadcrumbsProps {
 }
 
 const Breadcrumbs: FC<BreadcrumbsProps> = ({ className, inputItems }) => {
-  return <div className={className}>{ inputItems.join('/') }</div>;
+  return <div className={className}>{ inputItems.join(' / ') }</div>;
 };
 
 export default Breadcrumbs;

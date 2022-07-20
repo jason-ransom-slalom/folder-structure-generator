@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <div className="header">
-        <Breadcrumbs className="breadcrumbs" />
+        <Breadcrumbs className="breadcrumbs" inputItems={["folder1", "folder2", "file1.txt"]} />
       </div>
       <div className="body">
         <Folder className="folder" />

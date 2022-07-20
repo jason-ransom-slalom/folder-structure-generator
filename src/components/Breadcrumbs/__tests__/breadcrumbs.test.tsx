@@ -4,13 +4,12 @@ import Breadcrumbs from "../Breadcrumbs";
 describe("Breadcrumbs", () => {
   // This is a starter test and eventually
   // should be modified and/or deleted.
-  it("renders the breadcrumbs placeholder", () => {
-    const { queryByText } = render(<Breadcrumbs />);
+  it("renders folders and files separated by a forward slash", () => {
+    const { queryByText } = render(<Breadcrumbs inputItems={ [ "folder1", "folder2", "file1.txt" ] } />);
 
-    expect(queryByText("Breadcrumbs Placeholder")).toBeInTheDocument();
+    expect(queryByText("folder1/folder2/file1.txt")).toBeInTheDocument();
   });
 
-  // it.todo("renders folders and files separated by a forward slash");
   // it.todo("adds a space preceding and proceeding each forward slash");
   // it.todo("renders text in UPPERCASE");
   // it.todo("appends '(root folder)' to the end of folders.");

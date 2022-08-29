@@ -12,7 +12,7 @@ describe("Breadcrumbs", () => {
   it("renders text in UPPERCASE with file extensions in lowercase", () => {
     const { queryByText } = render(<Breadcrumbs inputItems={["folder1", "folder2", "file1.txt"]} />);
 
-    // false passed to be case-sensitive
+    // true passed to be case-sensitive
     expect(queryByText("FOLDER1 / FOLDER2 / FILE1.txt", { exact: true })).toBeInTheDocument();
   });
 

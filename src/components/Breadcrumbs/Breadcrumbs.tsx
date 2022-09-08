@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { formatBreadcrumbs } from './breadcrumbsUtil';
 
 interface BreadcrumbsProps {
   className?: string;
@@ -6,7 +7,9 @@ interface BreadcrumbsProps {
 }
 
 const Breadcrumbs: FC<BreadcrumbsProps> = ({ className, inputItems }) => {
-  return <div className={className}>{ inputItems.join(' / ') }</div>;
+  const formattedInputItems = formatBreadcrumbs(inputItems);
+
+  return <div className={className}>{ formattedInputItems.join(' / ') }</div>;
 };
 
 export default Breadcrumbs;
